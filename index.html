@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./img/icons/icon-512x512.png" type="image/x-icon">
+    <link rel="manifest" href="./manifest.json">
+    <title></title>
+</head>
+
+<body>
+    <div id="portada">
+        <img src="./img/Mersenne8.jpg" alt="">
+    </div>
+    <div class="division">
+        <section id="descripcion">
+            <button class="category" onclick="Show(1)">AVENTURAS ÚNICAS</button>
+            <button class="category" onclick="Show(2)">ADQUIERE HABILIDADES</button>
+            <button class="category" onclick="Show(3)">DIMENSIONES LOCAS</button>
+    
+        </section>
+        <section id="showText">
+            <div id="justified">
+                <h2 id="title">
+                    Una aventura comienza
+                </h2>
+                <p id="lore">
+                    Has sido capturado de tu propia dimensión y has llegado a una totalmente ajena.
+                    Descubre quien te ha traido aquí y trae el equilibrio a las posibles dimensiones habidas
+                    y por haber.
+                </p>
+            </div>
+        </section>
+        <section id="download">
+            <button id="dbutton" onclick="">DESCARGAR</button>
+        </section>
+    </div>
+    <div class="division">
+        <section class="titleh1">
+            <h1>REQUISITOS TECNICOS</h1>
+        </section>
+        <section id="requirements">
+            <article>
+                <h2 class="reqTitle">Minimos</h2>
+                <p class="reqDescr">               
+                    <br>
+                    SO COMPATIBLES: Windows 8 o Windows 10 (32/64 bits)
+                    <br>
+                    PROCESADOR: Intel Pentium® IV @ 3.0 GHz o AMD Athlon® 64 3000 +
+                    <br>
+                    RAM: 2 GB de RAM
+                    <br>
+                    TARJETA DE VIDEO: nVidia GeForce 6800GT o AMD Radeon X1950 Pro 256MB VRAM con Shader Model 3.0
+                    <br>
+                    DISCO DURO: 6 GB de espacio disponible
+                    <br>
+                    TARJETA DE SONIDO: tarjeta de sonido con controladores actualizados, compatible con DirectX
+                </p>
+            </article>
+            <article>
+                <h2 class="reqTitle">
+                    Recomendados
+                </h2>
+                <p class="reqDescr">
+                    <br>
+                    SO: Windows 8 o Windows 10 (32/64 bits)
+                    <br>
+                    PROCESADOR: Intel Core 2 Duo E4400 @ 2.0 GHz o AMD Athlon64 X2 3800+@ 2 GHz
+                    <br>
+                    RAM: 4 GB de RAM
+                    <br>
+                    TARJETA DE VIDEO: nVidia GeForce 9600GT o superior, AMD Radeon HD3850 o superior 512MB VRAM con Shader Model 4.0
+                    <br>
+                    DISCO DURO: 6 GB de espacio disponible
+                    <br>
+                    TARJETA DE SONIDO: tarjeta de sonido con controladores actualizados, compatible con DirectX
+                </p>
+            </article>
+            
+        </section>
+    </div>
+    <div class="division">
+        <section class="titleh1">
+            <h1>GALERIA</h1>
+        </section>
+        <section id="galery">
+            
+            <ul class="slider">
+                <li>
+                    <input type="radio" id="slide1" name="slide" checked>
+                    <label for="slide1"></label>
+                    <img src="./img/alien_attack.png" alt="">
+    
+                </li>
+                <li>
+                    <input type="radio" id="slide2" name="slide">
+                    <label for="slide2"></label>
+                    <img src="./img/robot_looking.png" alt="">   
+                </li>
+                <li>
+                    <input type="radio" id="slide3" name="slide">
+                    <label for="slide3"></label>
+                    <img src="./img/ruined_city.png" alt="">
+                </li>
+                <li>
+                    <input type="radio" id="slide4" name="slide">
+                    <label for="slide4"></label>
+                    <img src="./img/planet.png" alt="">
+                </li>
+    
+            </ul>
+        </section>
+    </body>
+    </div>
+    
+<footer>
+    <img id="clasificacion" src="./img/clasificacion.png" alt="">
+    <p id="developer">Desarrollado por Just4Fun</p>
+    <img src="./img/logo rojo.png" alt="">
+</footer>
+<script>
+    function Show(slot) {
+        //var x= document.getElementById("showText")
+        
+
+        switch (slot) {
+            case 1:
+                //x.style.display ='flex';
+                document.getElementById('title').innerHTML="Una aventura comienza";
+                document.getElementById('lore').innerHTML="Has sido capturado de tu propia dimensión y has llegado a una totalmente ajena. Descubre quien te ha traido aquí y trae el equilibrio a las posibles dimensiones habidas y por haber.";
+                
+                break;
+            case 2:
+
+                //x.style.display ='flex';
+                document.getElementById('title').innerHTML="Propulsion extra";
+                document.getElementById('lore').innerHTML="Progresa a traves de los distintos obstaculos y reune dinero para poder pagar un viaje a las demas dimensiones.";
+                break;
+
+            case 3:
+
+                //x.style.display ='flex';
+                document.getElementById('title').innerHTML="Mundos nunca vistos";
+                document.getElementById('lore').innerHTML="Las distintas realidades se encuentran en peligro, un ente maligno amenaza en las sombras.";
+    
+                break;
+                
+            default:
+                document.getElementById('title').innerHTML="Una aventura comienza";
+                document.getElementById('lore').innerHTML="SAMPLE TEXT";
+                break;
+        }
+       
+    }
+</script>
+<script>
+    if (navigator.serviceWorker) {
+    navigator.serviceWorker.register('./sw.js', {scope: './'})
+  }
+</script>
+</html>

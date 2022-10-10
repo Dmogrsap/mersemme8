@@ -1,0 +1,19 @@
+
+{
+  "lang":"es.MX",
+  "name": "PWA Mersenne8",
+  "short_name": "Mersenne",
+  "theme_color": "#fff",
+  "background_color": "#fff",
+  "display": "standalone",
+  "orientation": "any",
+  "scope": "./",
+  "start_url": "./index.html",
+  "icons": [
+    {
+      "src": "/img/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
